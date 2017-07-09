@@ -10,15 +10,23 @@ public class Pie {
 	/**
 	 * Calculates pie, using i iterations
 	 * @param i
-	 * @return 
-	 * @return 
+	 * @return pie
 	 */
-	public int calculatePie(int i) {
-		int pie = 0;
+	public double calculatePie(int i) {
+		double nThrows = i;
+		double nHits = 0;
+		for (int j = 0; j < nThrows; ++j) {
+			double r1 = Math.random();
+			double r2 = Math.random();
+			double r = (r1*r1) + (r2*r2);
+			if (r <= 1) 
+				++nHits;
+		}
 		
-		
+		double pie = 4*(nHits/nThrows);
 		return pie;
-		
 	}
 
 }
+
+
