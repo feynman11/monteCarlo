@@ -22,7 +22,6 @@ public class Pie {
 			if (r <= 1) 
 				++nHits;
 		}
-		
 		double pie = 4*(nHits/nThrows);
 		return pie;
 	}
